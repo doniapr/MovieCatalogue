@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    tools:context=".DetailMovieActivity">
+
+    <ImageView
+        android:id="@+id/img_detail_poster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/txt_detail_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/img_detail_poster"
+        android:text="@string/title"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_detail_name"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_toEndOf="@id/img_detail_poster">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/genre"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/txt_detail_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:text="@string/genre"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/runtime"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/txt_detail_runtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:text="@string/runtime"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/director"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/txt_detail_director"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_weight="1"
+                android:text="@string/director"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:id="@+id/sinopsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_detail_poster"
+        android:layout_marginTop="25dp"
+        android:text="@string/sinopsis"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txt_detail_sinopsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sinopsis"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="@string/sinopsis"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"/>
+</RelativeLayout>
